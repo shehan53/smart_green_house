@@ -24,7 +24,7 @@ public class GreenhouseSimulator {
     private double temperature;
     private double humidity;
     private double soil;
-    /** When the TRUE temperature went above 35 C - used only to MEASURE the RT2 reaction time. */
+
     private long aboveAlarmSinceMs = -1;
     private final Random noise = new Random();
 
@@ -32,7 +32,6 @@ public class GreenhouseSimulator {
         reset();
     }
 
-    // CONCEPT 8: synchronized - temperature, humidity and soil always change together consistently
     public synchronized void reset() {
         double old = temperature;
         temperature = NORMAL_TEMPERATURE;
